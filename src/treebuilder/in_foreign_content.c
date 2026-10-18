@@ -428,7 +428,7 @@ hubbub_error handle_in_foreign_content(hubbub_treebuilder *treebuilder,
 			err = process_as_in_secondary(treebuilder, token);
 		} else if (type == B || type ==  BIG || type == BLOCKQUOTE ||
 				type == BODY || type == BR || type == CENTER ||
-				type == CODE || type == DD || type == DIV ||
+				type == HTML_CODE || type == DD || type == DIV ||
 				type == DL || type == DT || type == EM ||
 				type == EMBED || type == H1 || type == H2 || 
 				type == H3 || type == H4 || type == H5 || 

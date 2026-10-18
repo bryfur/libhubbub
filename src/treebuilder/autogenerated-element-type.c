@@ -201,7 +201,7 @@ static const struct element_type_map wordlist[] =
 #line 74 "src/treebuilder/element-type.gperf"
     {"hr",                  HR},
 #line 52 "src/treebuilder/element-type.gperf"
-    {"dir",                 DIR},
+    {"dir",                 HTML_DIR},
 #line 123 "src/treebuilder/element-type.gperf"
     {"tfoot",               TFOOT},
 #line 97 "src/treebuilder/element-type.gperf"

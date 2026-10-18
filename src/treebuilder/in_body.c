@@ -265,7 +265,7 @@ hubbub_error process_start_tag(hubbub_treebuilder *treebuilder,
 	} else if (type == ADDRESS || type == ARTICLE || type == ASIDE ||
 			type == BLOCKQUOTE || type == CENTER ||
 			type == DATAGRID || type == DETAILS ||
-			type == DIALOG || type == DIR ||
+			type == DIALOG || type == HTML_DIR ||
 			type == DIV || type == DL || type == FIELDSET ||
 			type == FIGCAPTION || type == FIGURE ||
 			type == FOOTER || type == HEADER || type == MAIN ||
@@ -291,7 +291,7 @@ hubbub_error process_start_tag(hubbub_treebuilder *treebuilder,
 		err = process_plaintext_in_body(treebuilder, token);
 	} else if (type == A) {
 		err = process_a_in_body(treebuilder, token);
-	} else if (type == B || type == BIG || type == CODE || type == EM || 
+	} else if (type == B || type == BIG || type == HTML_CODE || type == EM || 
 			type == FONT || type == I || type == S || 
 			type == SMALL || type == STRIKE || 
 			type == STRONG || type == TT || type == U) {
@@ -432,7 +432,7 @@ hubbub_error process_end_tag(hubbub_treebuilder *treebuilder,
 		err = process_0body_in_body(treebuilder);
 	} else if (type == ADDRESS || type == ARTICLE || type == ASIDE ||
 			type == BLOCKQUOTE || type == CENTER ||
-			type == DETAILS || type == DIALOG || type == DIR ||
+			type == DETAILS || type == DIALOG || type == HTML_DIR ||
 			type == DATAGRID || type == DIV || type == DL ||
 			type == FIELDSET || type == FIGCAPTION ||
 			type == FIGURE || type == FOOTER || type == HEADER ||
@@ -449,7 +449,7 @@ hubbub_error process_end_tag(hubbub_treebuilder *treebuilder,
 	} else if (type == H1 || type == H2 || type == H3 || 
 			type == H4 || type == H5 || type == H6) {
 		err = process_0h_in_body(treebuilder, type);
-	} else if (type == A || type == B || type == BIG || type == CODE ||
+	} else if (type == A || type == B || type == BIG || type == HTML_CODE ||
 			type == EM || type == FONT || type == I ||
 			type == NOBR || type == S || type == SMALL ||
 			type == STRIKE || type == STRONG ||
